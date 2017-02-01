@@ -1,5 +1,5 @@
 module.exports = {
-    name: 'SugarButtonController',
+    name: 'lemonBuyButtonController',
     func: function ($scope) {
 
     },

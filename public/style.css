@@ -1254,4 +1254,28 @@ button {
         margin-bottom: 0; } }
 
 body {
+  max-width: 75rem;
+  margin-right: auto;
+  margin-left: auto;
   background-color: grey; }
+  body::before, body::after {
+    display: table;
+    content: ' '; }
+  body::after {
+    clear: both; }
+
+.top-box {
+  text-align: center;
+  display: inline-block;
+  border: 1px solid black;
+  width: 200px; }
+
+.stock {
+  text-align: center;
+  display: inline-block;
+  border: 1px solid black;
+  width: 200px; }
+
+button {
+  padding: 5px;
+  background-color: white; }

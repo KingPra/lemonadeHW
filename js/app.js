@@ -2,17 +2,38 @@ const app = angular.module('Lemonade', []);
 
 
 const controllers = [
-    require('./controllers/sugarButton'),
+    require('./controllers/lemonStock'),
+    require('./controllers/lemonInfo'),
+    require('./controllers/lemonBuyButton'),
 ];
 
 for (let i =0; i < controllers.length; i++) {
     app.controller(controllers[i].name, controllers[i].func);
+    console.log(controllers[i]);
+    console.log('lemonstock');
 }
 
-app.component('sugarButton', {
+app.component('lemonStock', {
 
-    templateUrl: 'templates/sugar-button.html',
-    bindings: {},
-    controller: SnackButtonController,
+    templateUrl: 'templates/lemon-stock.html',
+    controller: 'LemonStockController',
 
+});
+
+app.component('lemonInfo', {
+
+    templateUrl: 'templates/lemon-info.html',
+    controller: 'LemonInfoController',
+
+});
+
+app.component('lemonBuyButton', {
+
+    templateUrl: 'templates/lemon-buy-button.html',
+    controller: 'LemonBuyButtonController',
+
+});
+
+app.factory('lemonPeopleService', function () {
+    console.log('lemon service in the house');
 });
